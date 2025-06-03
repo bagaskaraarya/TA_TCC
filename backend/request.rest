@@ -6,7 +6,7 @@ Cookie: refreshToken=PASTE_YOUR_REFRESH_TOKEN_HERE
 
 ### LOGOUT
 DELETE http://localhost:5000/logout
-Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlBldHVnYXMgU2F0dSIsImVtYWlsIjoicGV0dWdhczFAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMjUtMDYtMDFUMDc6MDY6MTMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjUtMDYtMDFUMDc6NDM6NTUuMDAwWiIsImlhdCI6MTc0ODc2Mzk0MSwiZXhwIjoxNzQ4ODUwMzQxfQ.ynYeossJ-yLdkG2Y2sDkX4x1AfQU0GpiYxMEP6doago
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ###
 
@@ -23,7 +23,7 @@ Content-Type: application/json
 
 ###
 
-### Login User
+### LOGIN USER
 POST http://localhost:5000/login
 Content-Type: application/json
 
@@ -36,20 +36,20 @@ Content-Type: application/json
 
 ### GET SEMUA USER (Protected)
 GET http://localhost:5000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 ###
 
-### GET USER BY ID (Protected)
+### GET USER BY ID
 GET http://localhost:5000/users/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 ###
 
-### UPDATE USER (Protected)
+### UPDATE USER
 PUT http://localhost:5000/update-user/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 {
   "name": "Petugas Satu",
@@ -59,28 +59,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6b
 
 ###
 
-### DELETE USER (Protected)
+### DELETE USER
 DELETE http://localhost:5000/delete-user/1
 Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 ###
 
-### KEGIATAN KERJA - GET SEMUA
+### GET SEMUA KEGIATAN KERJA
 GET http://localhost:5000/kegiatan-kerja
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 ###
 
 ### GET KEGIATAN KERJA BY ID
 GET http://localhost:5000/kegiatan-kerja/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 ###
 
 ### ADD KEGIATAN KERJA
 POST http://localhost:5000/add-kegiatan-kerja
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 {
   "nama_kegiatan": "Pelatihan Digital",
@@ -94,7 +94,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6b
 ### UPDATE KEGIATAN KERJA
 PUT http://localhost:5000/update-kegiatan-kerja/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 {
   "nama_kegiatan": "Pelatihan",
@@ -105,26 +105,26 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6b
 
 ### DELETE KEGIATAN KERJA
 DELETE http://localhost:5000/delete-kegiatan-kerja/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 ###
 
 ### GET SEMUA ANGGARAN
 GET http://localhost:5000/anggaran
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 ###
 
 ### GET ANGGARAN BY ID
 GET http://localhost:5000/anggaran/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 ###
 
 ### ADD ANGGARAN
 POST http://localhost:5000/add-anggaran
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 {
   "keterangan": "Kardus",
@@ -138,16 +138,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6b
 ### UPDATE ANGGARAN
 PUT http://localhost:5000/update-anggaran/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
 
 {
-  "jumlah": 25,
-  "keterangan": "Biaya Sewa Gedung",
+  "keterangan": "Kardus Besar",
+  "jumlah": 10,
   "harga": 20000
 }
 
 ###
-
-### DELETE ANGGARAN
-DELETE http://localhost:5000/delete-anggaran/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6bnVsbCwiZW1haWwiOiJwZXR1Z2FzMUBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzowNjoxMy4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNi0wMVQwNzoxNDozOC4wMDBaIiwiaWF0IjoxNzQ4NzYyMTczLCJleHAiOjE3NDg4MDUzNzN9.3-9QjcU1BrUJ3x03CdhKGS3Hr_ugL7EuWstoh_bVDaY
