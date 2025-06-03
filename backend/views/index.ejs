@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API Documentation - Rencana Kerja dan Anggaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px auto;
+      max-width: 900px;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f9ff;
+    }
+    .token-yes {
+      color: green;
+      font-weight: bold;
+    }
+    .token-no {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>API Documentation</h1>
+
+  <h2>User Routes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Endpoint</th>
+        <th>Description</th>
+        <th>Requires Token?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>POST</td><td>/login</td><td>User login, returns access and refresh token</td><td class="token-no">No</td></tr>
+      <tr><td>DELETE</td><td>/logout</td><td>User logout, invalidates refresh token</td><td class="token-no">No</td></tr>
+      <tr><td>POST</td><td>/register</td><td>Register a new user</td><td class="token-no">No</td></tr>
+      <tr><td>GET</td><td>/users</td><td>Get all users</td><td class="token-yes">Yes</td></tr>
+      <tr><td>GET</td><td>/users/:id</td><td>Get user by ID</td><td class="token-yes">Yes</td></tr>
+      <tr><td>DELETE</td><td>/delete-user/:id</td><td>Delete user by ID</td><td class="token-yes">Yes</td></tr>
+      <tr><td>PUT</td><td>/update-user/:id</td><td>Update user by ID</td><td class="token-yes">Yes</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Kegiatan Kerja Routes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Endpoint</th>
+        <th>Description</th>
+        <th>Requires Token?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>GET</td><td>/kegiatan-kerja</td><td>Get all kegiatan kerja</td><td class="token-yes">Yes</td></tr>
+      <tr><td>GET</td><td>/kegiatan-kerja/:id</td><td>Get kegiatan kerja by ID</td><td class="token-yes">Yes</td></tr>
+      <tr><td>POST</td><td>/add-kegiatan-kerja</td><td>Add new kegiatan kerja</td><td class="token-yes">Yes</td></tr>
+      <tr><td>PUT</td><td>/update-kegiatan-kerja/:id</td><td>Update kegiatan kerja by ID</td><td class="token-yes">Yes</td></tr>
+      <tr><td>DELETE</td><td>/delete-kegiatan-kerja/:id</td><td>Delete kegiatan kerja by ID</td><td class="token-yes">Yes</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Anggaran Routes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Endpoint</th>
+        <th>Description</th>
+        <th>Requires Token?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>GET</td><td>/anggaran</td><td>Get all anggaran</td><td class="token-yes">Yes</td></tr>
+      <tr><td>GET</td><td>/anggaran/:id</td><td>Get anggaran by ID</td><td class="token-yes">Yes</td></tr>
+      <tr><td>POST</td><td>/add-anggaran</td><td>Add new anggaran</td><td class="token-yes">Yes</td></tr>
+      <tr><td>PUT</td><td>/update-anggaran/:id</td><td>Update anggaran by ID</td><td class="token-yes">Yes</td></tr>
+      <tr><td>DELETE</td><td>/delete-anggaran/:id</td><td>Delete anggaran by ID</td><td class="token-yes">Yes</td></tr>
+    </tbody>
+  </table>
+
+  <footer style="margin-top: 40px; font-size: 0.9em; color: #666; text-align:center;">
+    <p>© 2025 Rencana Kerja dan Anggaran API Documentation</p>
+  </footer>
+</body>
+</html>
