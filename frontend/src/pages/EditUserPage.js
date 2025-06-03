@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-
-const BASE_URL = "http://localhost:5000"; // Sesuaikan dengan endpoint backend Anda
+import { BASE_URL } from "../utils/Utils";
 
 const EditProfilePage = () => {
   const { id } = useParams();

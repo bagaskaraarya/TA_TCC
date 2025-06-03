@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-
-const BASE_URL = "http://localhost:5000"; // Ganti sesuai endpoint backend kamu
+import { BASE_URL } from "../utils/Utils"; // Ganti sesuai endpoint backend kamu
 
 const RegisterPage = () => {
   const [name, setNama] = useState("");
