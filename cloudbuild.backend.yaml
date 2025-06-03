@@ -1,10 +1,10 @@
 steps:
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build","-t","gcr.io/$PROJECT_ID/backendnotes","."]
+    args: ["build","-t","gcr.io/$PROJECT_ID/backend","."]
     dir: "backend"
 
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push","gcr.io/$PROJECT_ID/backendnotes"]
+    args: ["push","gcr.io/$PROJECT_ID/backend"]
   
   - name: "gcr.io/cloud-builders/gcloud"
     entrypoint: gcloud
@@ -12,9 +12,9 @@ steps:
       [
         "run",
         "deploy",
-        "backendnotes-188",
+        "backend",
         "--image",
-        "gcr.io/$PROJECT_ID/backendnotes",
+        "gcr.io/$PROJECT_ID/backend",
         "--timeout",
         "1000s",
         "--port",
@@ -32,7 +32,7 @@ steps:
         "run",
         "services",
         "add-iam-policy-binding",
-        "backendnotes",
+        "backend",
         "--member=allUsers",
         "--role=roles/run.invoker",
         "--region=us-central1"
