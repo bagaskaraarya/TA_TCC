@@ -9,7 +9,7 @@ const DB_PASSWORD = process.env.DB_PASSWORD;
 const DB_HOST = process.env.DB_HOST;
 
 //menyambungkan ke database
-const db = new Sequelize('DB_NAME','DB_USERNAME','DB_PASSWORD',{
+const db = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
     host : DB_HOST,
     dialect : "mysql"
 });
