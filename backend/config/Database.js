@@ -9,7 +9,7 @@ const DB_PASSWORD = process.env.DB_PASSWORD;
 
 //menyambungkan ke database
 const db = new Sequelize('projectTCC','root','',{
-    host : 'localhost',
+    host : '34.60.53.131',
     dialect : "mysql"
 });
 
