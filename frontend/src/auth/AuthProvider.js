@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   // 3. Fungsi login
    const login = async (email, password) => {
     try {
-      const res = await axios.post(`${BASE_URL}login`, { email, password }, {
+      const res = await axios.post(`${BASE_URL}/login`, { email, password }, {
         withCredentials: true
       });
 
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
   try {
     // Kirim permintaan logout ke backend untuk menghapus refreshToken dari DB
-    await axios.delete(`${BASE_URL}logout`, {
+    await axios.delete(`${BASE_URL}/logout`, {
       withCredentials: true,
     });
     localStorage.removeItem("token");
@@ -65,7 +65,7 @@ export const AuthProvider = ({ children }) => {
   // 5. Fungsi refresh token
   const refreshAccessToken = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}token`, {
+      const res = await axios.get(`${BASE_URL}/token`, {
         withCredentials: true // Kirim cookie refreshToken
       });
 
